@@ -10,7 +10,7 @@ name: Render and publish
 jobs:
   docker:
     runs-on: ubuntu-latest
-    container: ghcr.io/${{ github.repository }}:main
+    container: ghcr.io/Maximilian-Stefan-Ernst/project:main
     steps:
       -
         name: Checkout repository
