@@ -25,12 +25,7 @@ The dataset we use **stems** from the [Bank of England Research datasets](https:
 
 I quote:
 
-> *This dataset contains the individual responses to our Inflation Attitudes Survey, a quarterly survey of people’s feelings about inflation and other economic variables like the interest rate*. 
-
-```{r}
-with(mtcars, plot(hp, mpg))
-```
-
+> *This dataset contains the individual responses to our Inflation Attitudes Survey, a quarterly survey of people’s feelings about inflation and other economic variables like the interest rate*.
 
 ```{r load-inflation}
 # code chunks can come from other scripts, this one is loaded from:
@@ -52,5 +47,6 @@ inflation %>%
   ungroup() %>% 
   ggplot() +
   geom_line(aes(date, value, color = name)) +
-  NULL
+  theme_void() +
+  scale_color_manual(values = c("#000000", "#000000"))
 ```
